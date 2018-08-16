@@ -1,552 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>RRPM</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+    rel='stylesheet' type='text/css'>
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/creative.min.css" rel="stylesheet">
+  <link href="css/creative.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.jpeg" type="image/gif" sizes="30x30">
+  <style>
+    label {
+      float: left;
+      color: #2d76b1;
+      font-size: 12px;
+    }
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    input[type="text"],
+    input[type="email"] {
+      font-size: 12px;
+    }
 
-    <title>RRPM</title>
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0;
+    }
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    .dropdown:hover,
+    .dropdown:active {
+      letter-spacing: 5px;
+    }
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    .dropdown:after,
+    .dropdown:before {
+      backface-visibility: hidden;
+      border: 1px solid rgba(#fff, 0);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 280ms ease-in-out;
+      width: 0;
+    }
 
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
-		   <link href="css/creative.css" rel="stylesheet">
-		   <link rel="icon" href="img/logo.png" type="image/gif" sizes="30x30">
-<style>
-label{
-float:left;
-color:#f05f40;
-font-size:12px;
-}
-input[type="text"],input[type="email"]{
-font-size:12px;
-}
-.special-btn{
-heihgt:15px;
-font-size:12px;
-width:auto;
-}
+    .dropdown:hover:after,
+    .dropdown:hover:before {
+      backface-visibility: hidden;
+      border-color: #fff;
+      transition: width 350ms ease-in-out;
+      width: 70%;
+    }
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#f05f40;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-	width:AUTO;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #62442D}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-.navbar-light .navbar-nav .nav-link{
-color:white;
-font-weight:bold;
-}
-
-.navbar-light:hover .navbar-nav:hover .nav-link:hover{
-color:#62442D;
-}
-.navbar-light .navbar-nav .nav-link{
-color:#f05f40;
-}
-
-header.innovationhead{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("./img/innovations.jpg");
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-header.innovationhead hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-header.innovationhead h1 {
-  font-size: 2rem;
-}
-
-header.innovationhead p {
-  font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  header.innovationhead {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  header.innovationhead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  header.innovationhead h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.innovationhead h1 {
-    font-size: 4rem;
-  }
-}
-
-header.innovationmorehead{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("./img/sustainability.jpg");
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-header.innovationmorehead hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-header.innovationmorehead h1 {
-  font-size: 2rem;
-}
-
-header.innovationmorehead p {
-  font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  header.innovationmorehead {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  header.innovationmorehead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  header.innovationmorehead h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.innovationmorehead h1 {
-    font-size: 4rem;
-  }
-}
+    .dropdown:hover:before {
+      bottom: auto;
+      top: 0;
+      width: 70%;
+    }
 
 
-</style>
-  </head>
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2d76b1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+      z-index: 1;
+      width: AUTO;
+    }
 
-  <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/logo.png" height="60px" width="120px"></a><p style="color:#62442D;font-weight:bold;margin-top:15px">RaajRoop Print Management Pvt Ltd.</p>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-		  <div class="dropdown">
-		  <li class="nav-item">
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #437397;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar-light:hover .navbar-nav:hover .nav-link:hover {
+      color: #437397;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: #2d76b1;
+    }
+
+    header.innovationhead {
+      padding-top: 10rem;
+      padding-bottom: calc(10rem - 56px);
+      background-image: url("./img/innovations.jpg");
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    header.innovationhead hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    header.innovationhead h1 {
+      font-size: 2rem;
+    }
+
+    header.innovationhead p {
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      header.innovationhead {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      header.innovationhead {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      header.innovationhead h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      header.innovationhead h1 {
+        font-size: 4rem;
+      }
+    }
+
+    header.innovationmorehead {
+      padding-top: 10rem;
+      padding-bottom: calc(10rem - 56px);
+      background-image: url("./img/sustainability.jpg");
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    header.innovationmorehead hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    header.innovationmorehead h1 {
+      font-size: 2rem;
+    }
+
+    header.innovationmorehead p {
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      header.innovationmorehead {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      header.innovationmorehead {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      header.innovationmorehead h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      header.innovationmorehead h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <img src="img/logo.jpeg" height="60px" width="120px">
+      </a>
+      <p style="color:#2D76B1;font-weight:bold;margin-top:15px">RaajRoop Print Management Pvt Ltd.</p>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <div class="dropdown">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="index.html">HOME</a>
-            </li></div>
-		  <div class="dropdown">
+            </li>
+          </div>
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  href="about.html#about">COMPANY</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html#leadership">LEADERSHIP</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html#awards">AWARDS</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">MEMBERSHIPS</a>
-            </li>
-						 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CARRERS</a>
-            </li>
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="about.html#leadership">LEADERSHIP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="about.html#awards">AWARDS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">MEMBERSHIPS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CARRERS</a>
+                </li>
 
-			</ul>
-  </div></div>
-  
+              </ul>
+            </div>
+          </div>
+
           <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="services.html">PACKING</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="services.html">PRINT</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="services.html">CREATIVE</a>
-            </li>
-			</ul>
-  </div></div>
-  
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="services.html">PACKING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="services.html">PRINT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="services.html">CREATIVE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
- <div class="dropdown"> 
+
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">INNOVATIONS</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">INHABITABLE</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">MARKET&nbsp;VALUE</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">RESOURCES</a>
-            </li>
-			</ul>
-  </div></div>
-   <div class="dropdown"> 
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">INHABITABLE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">MARKET&nbsp;VALUE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">RESOURCES</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
-            </li></div>
-          </ul>
-        </div>
-      </div>
-    </nav>
-	
-    <header class="innovationhead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2 class="text-uppercase">
-              <strong id="moving-text"></strong>
-            </h2>
-            <hr>
+            </li>
           </div>
-            <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.!</p>
-          <div class="col-lg-8 mx-auto">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
-          </div>
-        </div>
+        </ul>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h3 class="section-heading text-white" style="font-weight:bold">INNOVATIONS</h3>
-            <hr class="light my-4">
-            <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.!
-				<br><br>
-			Technology is developing at a rapid pace and changing many established methods of accomplishing tasks and completing projects. The print and design industries are excellent examples of areas seeing these changes and innovations. To remain competitive and profitable, both large and small print business owners are encouraged to educate themselves on the latest developments in their industries, particularly in software and machine features. Some recent print technology innovations worth noting include high-speed digital printing on demand, three-dimensional printing, hybrid print processes and the increased efficiency of digital print workflows.
-			</p>
-			   <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">The Rise of 3D Printing</h5><br><br>
-			   <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Printing is no longer confined to flat sheets of paper, and the same mechanical processes can now be applied to rendering three-dimensional objects from raw material. &nbsp;&nbsp;&nbsp;<a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePromotional" style="text-decoration:underline" onclick="scrollWin()">Read More</a></p>
-				<div id="readmorePromotional" class="collapse">
-				<div class="row">
-		  <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-		  <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">This innovation has caught significant attention within the print and design industries, and many print business owners have taken note of the creative as well as the manufacturing possibilities. Rendering replacement appliance and machine parts is now a service found in some print companies whose owners would not have conceived of the idea in the past. Larger scale commercial 3D printing also has the potential for innovations in the trade show exhibit specialty field. As the demand for visually unique display booths increases, design companies that utilize 3D printing for booth pieces are in a great position to draw this type of exhibitor clientele.</p>
-		  </div>
-		  
-		  </div>
-       </div>	
-			   <br><br>
-				 <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Software Innovations for Print Businesses</h5><br><br>
-			   <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Graphic design software for print projects now has a wider range of features and tools, allowing for easier workflows, better file compatibility and more collaboration between designers in different geographic locations. &nbsp;&nbsp;&nbsp;<a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePackingnPrint" style="text-decoration:underline" onclick="scrollWin()">Read More</a></p>
-			
-			<div id="readmorePackingnPrint" class="collapse">
-			<div class="row">
-		  <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-		  <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">New design software suites now include three-dimensional tools that allow designers to create parts and objects without the need for extensive engineering knowledge.
+  <header class="innovationhead text-center text-white d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2 class="text-uppercase">
+            <strong id="moving-text"></strong>
+          </h2>
+          <hr>
+        </div>
+        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+          starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
+          satisfaction and on time delievry with desired result and expected value.!</p>
+        <div class="col-lg-8 mx-auto">
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-Even two-dimensional printed projects can now be completed with more cost-effective methods, thanks to the greater flexibility of modern design software. The need for film media and offset print machines is in a steady decline as more of the same results can be accomplished electronically with software workflows. The learning curve of these design suites may be somewhat steeper in the beginning for new users, but print company owners who invest in them are seeing the benefits in terms of higher project quality in less time.</p>
-		  </div>
-       </div>	
-			</div>
-			
-			   <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Hybrid Print Technologies</h5><br><br>
-			   <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate automation. &nbsp;&nbsp;&nbsp;<a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmoreCreative" style="text-decoration:underline" onclick="scrollWin()">Read More</a></p>
-			   
-			 <div id="readmoreCreative" class="collapse">
-			<div class="row">
-		  <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-		  <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate automation. This process allows the user to send finished image files to electronic plates that are able to recognize them, using technologies similar to those found in desktop scanners. Due to improvements in these print plates, hybrid processes can also accommodate more complex print projects with many different colors and finishes. Along with digital printing, software improvements and 3D developments, these print industry innovations are helping this field evolve to meet changing 21st-century demands.
-</p>
-		  </div>
-       </div>
-       </div>	  
-		  </div>
-        </div>
-      </div>
-    </section>  
-	
-	
-	 <header class="innovationmorehead text-center text-white d-flex"  id="marketingnInnovation">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2 class="text-uppercase">
-              <strong id="moving-text2" STYLE="COLOR:#F05F40 !important">Sustainability</strong>
-            </h2>
-            <hr>
-          </div>
-            <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.!</p>
-          <div class="col-lg-8 mx-auto">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreInmarketingnInnovation">Know More</a>
-          </div>
-        </div>
-      </div>
-    </header>
-	
-	
-    <section class="bg-light text-white" id="moreInmarketingnInnovation">
-      <div class="container text-center col-lg-8">
-        <h2 class="mb-4" style="color:#62442D">Field Of Innovation, Marketing & Resource</h2>
-		<p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#F05F40 !important">
-		RR Print Management Pvt Ltd has taken the initiative in order to accept all the new technology to grow up. In Order to market need and requiremnt RR Print Management Pvt Ltd has taken major role.
-		<br><br>
-		Since 2001, the MIT Technology Review has released their list of the 10 most important technological innovations that emerged each year. The editors selected each item based on its potential to change the world. Previous years lists included epigenetics, wireless sensor networks, grid computing, additive manufacturing, smart watches, and mobile 3-D. The 2014 list is just as exciting.</p>
-		
-		<div class="row">
-		<div class="col-lg-4"><img src="img/sustainability1.png" width="300px" height="300px"></div>
-		<div class="col-lg-8">
-		<p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#F05F40 !important">Moving towards sustainability is also a social challenge that entails international and national law, urban planning and transport, local and individual lifestyles and ethical consumerism. Ways of living more sustainably can take many forms from reorganizing living conditions (e.g., ecovillages, eco-municipalities and sustainable cities), reappraising economic sectors (permaculture, green building, sustainable agriculture), or work practices (sustainable architecture), using science to develop new technologies (green technologies, renewable energy and sustainable fission and fusion power), or designing systems in a flexible and reversible manner,and adjusting individual lifestyles that conserve natural resources.</p>
-		</div>
-		</div>
-		<br><br>
-		
-		<div class="row">
-		<div class="col-lg-8"><p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#F05F40 !important">Market value is the price an asset would fetch in the marketplace. Market value is also commonly used to refer to the market capitalization of a publicly-traded company, and is obtained by multiplying the number of its outstanding shares by the current share price. Market value is easiest to determine for exchange-traded instruments such as stocks and futures, since their market prices are widely disseminated and easily available, but is a little more challenging to ascertain for over-the-counter instruments like fixed income securities. However, the greatest difficulty in determining market value lies in estimating the value of illiquid assets like real estate and businesses, which may necessitate the use of real estate appraisers and business valuation experts respectively.</p></div>
-		<div class="col-lg-4"><img width="400px" height="300px" src="img/market_value.jpg"><h4 class="mb-4" style="color:#F05F40 !important">MARKET VALUE</h4></div>
-		</div>
-		<div class="row">
-		<div class="col-lg-4"></div>
-		<div class="col-lg-8"></div>
-		</div>
-      </div>
-    </section>
+  <section class="bg-primary" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h3 class="section-heading text-white" style="font-weight:bold">INNOVATIONS</h3>
+          <hr class="light my-4">
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+            starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
+            satisfaction and on time delievry with desired result and expected value.!
+            <br>
+            <br> Technology is developing at a rapid pace and changing many established methods of accomplishing tasks and completing
+            projects. The print and design industries are excellent examples of areas seeing these changes and innovations.
+            To remain competitive and profitable, both large and small print business owners are encouraged to educate themselves
+            on the latest developments in their industries, particularly in software and machine features. Some recent print
+            technology innovations worth noting include high-speed digital printing on demand, three-dimensional printing,
+            hybrid print processes and the increased efficiency of digital print workflows.
+          </p>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">The Rise of 3D Printing</h5>
+          <br>
+          <br>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Printing is no longer confined to flat sheets of paper, and the same mechanical processes can now be applied to
+            rendering three-dimensional objects from raw material. &nbsp;&nbsp;&nbsp;
+            <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePromotional" style="text-decoration:underline"
+              onclick="scrollWin()">Read More</a>
+          </p>
+          <div id="readmorePromotional" class="collapse">
+            <div class="row">
+              <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">This innovation has caught significant attention within the print and design industries, and many print business
+                  owners have taken note of the creative as well as the manufacturing possibilities. Rendering replacement
+                  appliance and machine parts is now a service found in some print companies whose owners would not have
+                  conceived of the idea in the past. Larger scale commercial 3D printing also has the potential for innovations
+                  in the trade show exhibit specialty field. As the demand for visually unique display booths increases,
+                  design companies that utilize 3D printing for booth pieces are in a great position to draw this type of
+                  exhibitor clientele.</p>
+              </div>
 
-	
-	
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+          <br>
+          <br>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Software Innovations for Print Businesses</h5>
+          <br>
+          <br>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Graphic design software for print projects now has a wider range of features and tools, allowing for easier workflows,
+            better file compatibility and more collaboration between designers in different geographic locations. &nbsp;&nbsp;&nbsp;
+            <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePackingnPrint" style="text-decoration:underline"
+              onclick="scrollWin()">Read More</a>
+          </p>
+
+          <div id="readmorePackingnPrint" class="collapse">
+            <div class="row">
+              <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">New design software suites now include three-dimensional tools that allow designers to create parts and objects
+                  without the need for extensive engineering knowledge. Even two-dimensional printed projects can now be
+                  completed with more cost-effective methods, thanks to the greater flexibility of modern design software.
+                  The need for film media and offset print machines is in a steady decline as more of the same results can
+                  be accomplished electronically with software workflows. The learning curve of these design suites may be
+                  somewhat steeper in the beginning for new users, but print company owners who invest in them are seeing
+                  the benefits in terms of higher project quality in less time.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-5 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">Raajroopprint@gmail.com</a>
-            </p>
+
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Hybrid Print Technologies</h5>
+          <br>
+          <br>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely
+            digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate
+            automation. &nbsp;&nbsp;&nbsp;
+            <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmoreCreative" style="text-decoration:underline"
+              onclick="scrollWin()">Read More</a>
+          </p>
+
+          <div id="readmoreCreative" class="collapse">
+            <div class="row">
+              <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely
+                  digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate
+                  automation. This process allows the user to send finished image files to electronic plates that are able
+                  to recognize them, using technologies similar to those found in desktop scanners. Due to improvements in
+                  these print plates, hybrid processes can also accommodate more complex print projects with many different
+                  colors and finishes. Along with digital printing, software improvements and 3D developments, these print
+                  industry innovations are helping this field evolve to meet changing 21st-century demands.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-	
-	 <div class="col-lg-8 mx-auto text-center">
-	  <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
-	  <h5 style="color:#f05f40" class="section-heading">CONTACT US NOW !</h5>
-	  <hr>
-	  <div class="alert alert-danger" style="display:none" id="errorDiv">
-     <strong>Error!</strong>&nbsp;&nbsp;&nbsp;<span id="errorMsg"></span>
+    </div>
+  </section>
+
+
+  <header class="innovationmorehead text-center text-white d-flex" id="marketingnInnovation">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2 class="text-uppercase">
+            <strong id="moving-text2" STYLE="COLOR:#2d76b1 !important">Sustainability</strong>
+          </h2>
+          <hr>
+        </div>
+        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+          starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
+          satisfaction and on time delievry with desired result and expected value.!</p>
+        <div class="col-lg-8 mx-auto">
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreInmarketingnInnovation">Know More</a>
+        </div>
       </div>
-	  
-	  <form>
-	  <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+    </div>
+  </header>
+
+
+  <section class="bg-light text-white" id="moreInmarketingnInnovation">
+    <div class="container text-center col-lg-8">
+      <h2 class="mb-4" style="color:#62442D">Field Of Innovation, Marketing & Resource</h2>
+      <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">
+        RR Print Management Pvt Ltd has taken the initiative in order to accept all the new technology to grow up. In Order to market
+        need and requiremnt RR Print Management Pvt Ltd has taken major role.
+        <br>
+        <br> Since 2001, the MIT Technology Review has released their list of the 10 most important technological innovations
+        that emerged each year. The editors selected each item based on its potential to change the world. Previous years
+        lists included epigenetics, wireless sensor networks, grid computing, additive manufacturing, smart watches, and
+        mobile 3-D. The 2014 list is just as exciting.</p>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="img/sustainability1.png" width="300px" height="300px">
+        </div>
+        <div class="col-lg-8">
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Moving towards sustainability is also a social challenge that entails international and national law, urban planning
+            and transport, local and individual lifestyles and ethical consumerism. Ways of living more sustainably can take
+            many forms from reorganizing living conditions (e.g., ecovillages, eco-municipalities and sustainable cities),
+            reappraising economic sectors (permaculture, green building, sustainable agriculture), or work practices (sustainable
+            architecture), using science to develop new technologies (green technologies, renewable energy and sustainable
+            fission and fusion power), or designing systems in a flexible and reversible manner,and adjusting individual
+            lifestyles that conserve natural resources.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Market value is the price an asset would fetch in the marketplace. Market value is also commonly used to refer
+            to the market capitalization of a publicly-traded company, and is obtained by multiplying the number of its outstanding
+            shares by the current share price. Market value is easiest to determine for exchange-traded instruments such
+            as stocks and futures, since their market prices are widely disseminated and easily available, but is a little
+            more challenging to ascertain for over-the-counter instruments like fixed income securities. However, the greatest
+            difficulty in determining market value lies in estimating the value of illiquid assets like real estate and businesses,
+            which may necessitate the use of real estate appraisers and business valuation experts respectively.</p>
+        </div>
+        <div class="col-lg-4">
+          <img width="400px" height="300px" src="img/market_value.jpg">
+          <h4 class="mb-4" style="color:#2d76b1 !important">MARKET VALUE</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="my-4">
+          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back
+            to you as soon as possible!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 ml-auto text-center">
+          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+          <p>123-456-6789</p>
+        </div>
+        <div class="col-lg-5 mr-auto text-center">
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <p>
+            <a href="mailto:your-email@your-domain.com">Raajroopprint@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8 mx-auto text-center">
+      <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
+      <h5 style="color:#2d76b1" class="section-heading">CONTACT US NOW !</h5>
+      <hr>
+      <div class="alert alert-danger" style="display:none" id="errorDiv">
+        <strong>Error!</strong>&nbsp;&nbsp;&nbsp;
+        <span id="errorMsg"></span>
+      </div>
+
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_name">Firstname *</label>
+              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required"
+                data-error="Firstname is required.">
+              <div class="help-block with-errors"></div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_lastname">Lastname *</label>
+              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                data-error="Lastname is required.">
+              <div class="help-block with-errors"></div>
             </div>
+          </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_email">Email *</label>
+              <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
+                data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_phone">Phone</label>
-                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone">
-                    <div class="help-block with-errors"></div>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_phone">Phone</label>
+              <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone">
+              <div class="help-block with-errors"></div>
             </div>
-        </div>
-		 <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">JOb Title</label>
-                    <input id="form_name" type="text" name="jobTitle" class="form-control" placeholder="Please enter your job title">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Company Name</label>
-                    <input id="form_lastname" type="text" name="companyName" class="form-control" placeholder="Please enter company name">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea  style="
-font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_name">JOb Title</label>
+              <input id="form_name" type="text" name="jobTitle" class="form-control" placeholder="Please enter your job title">
+              <div class="help-block with-errors"></div>
             </div>
-			
-			<div class="col-md-6">
-			     <p style="float:left;font-size:12px" class="text-muted"><strong>*</strong> These fields are required. </p>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_lastname">Company Name</label>
+              <input id="form_lastname" type="text" name="companyName" class="form-control" placeholder="Please enter company name">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
         </div>
-            <div class="col-md-6">
-                <input style="float:right; background:#f05f40" type="button" class="btn btn-success btn-send" value="Send message" onclick="return contactValidation()">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="form_message">Message *</label>
+              <textarea style="
+font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
+                data-error="Please,leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
             </div>
+          </div>
 
-        </div><br>
-<div class="alert alert-success" style="display:none" id="successMsg">
-  <strong>Success!</strong> Thanks For Reaching us,we will get back to you soon.
-</div>
-</form>
+          <div class="col-md-6">
+            <p style="float:left;font-size:12px" class="text-muted">
+              <strong>*</strong> These fields are required. </p>
+          </div>
+          <div class="col-md-6">
+            <input style="float:right; background:#2d76b1" type="button" class="btn btn-success btn-send" value="Send message" onclick="return contactValidation()">
+          </div>
+
+        </div>
+        <br>
+        <div class="alert alert-success" style="display:none" id="successMsg">
+          <strong>Success!</strong> Thanks For Reaching us,we will get back to you soon.
+        </div>
+      </form>
 
 
 
-	 </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
-	    <script src="js/extrajs.js"></script>
-	<script>
- var txt = 'EEXPECTATION YOURS, EFFORT OURS';
-var chars = txt.split('');
-var container = document.getElementById("moving-text");
-var i = 0;
-setInterval(function () {
-    if (i < chars.length) {
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+  <script src="js/extrajs.js"></script>
+  <script>
+    var txt = 'EEXPECTATION YOURS, EFFORT OURS';
+    var chars = txt.split('');
+    var container = document.getElementById("moving-text");
+    var i = 0;
+    setInterval(function () {
+      if (i < chars.length) {
         container.innerHTML += chars[i++];
-    } else {
+      } else {
         i = 0;
         container.innerHTML = "";
+      }
+
+
+    }, 150);
+
+    function scrollWin() {
+      window.scrollBy(0, 20);
     }
-	
-	
-}, 150);
 
-function scrollWin() {
-    window.scrollBy(0, 20);
-}
-
-</script>
-<footer class="footer"><br>
-  <div class="container text-center">
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-google-plus"></i></a>
-    <a href="#"><i class="fa fa-skype"></i></a>
-  </div><br>
-  <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.<br><br>( Developed by Sateesh Pandey +918860373248 )</p>
-</footer>
-  </body>
+  </script>
+  <footer class="footer">
+    <br>
+    <div class="container text-center">
+      <a href="#">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-skype"></i>
+      </a>
+    </div>
+    <br>
+    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.
+      <br>
+      <br>( Developed by Sateesh Pandey +918860373248 )</p>
+  </footer>
+</body>
 
 </html>

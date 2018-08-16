@@ -1,699 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>RRPM</title>
+  <title>RRPM</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+    rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
-		   <link href="css/creative.css" rel="stylesheet">
-		   <link rel="icon" href="img/logo.png" type="image/gif" sizes="30x30">
-<style>
-label{
-float:left;
-color:#f05f40;
-font-size:12px;
-}
-input[type="text"],input[type="email"]{
-font-size:12px;
-}
-.special-btn{
-heihgt:15px;
-font-size:12px;
-width:auto;
-}
+  <!-- Custom styles for this template -->
+  <link href="css/creative.min.css" rel="stylesheet">
+  <link href="css/creative.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.jpeg" type="image/gif" sizes="30x30">
+  <style>
+    label {
+      float: left;
+      color: #2d76b1;
+      font-size: 12px;
+    }
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+    input[type="text"],
+    input[type="email"] {
+      font-size: 12px;
+    }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#f05f40;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-	width:AUTO;
-}
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0;
+    }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+    .dropdown:hover,
+    .dropdown:active {
+      letter-spacing: 5px;
+    }
 
-.dropdown-content a:hover {background-color: #62442D}
+    .dropdown:after,
+    .dropdown:before {
+      backface-visibility: hidden;
+      border: 1px solid rgba(#fff, 0);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 280ms ease-in-out;
+      width: 0;
+    }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+    .dropdown:hover:after,
+    .dropdown:hover:before {
+      backface-visibility: hidden;
+      border-color: #fff;
+      transition: width 350ms ease-in-out;
+      width: 70%;
+    }
 
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-.navbar-light .navbar-nav .nav-link{
-color:white;
-font-weight:bold;
-}
-
-.navbar-light:hover .navbar-nav:hover .nav-link:hover{
-color:#62442D;
-}
-.navbar-light .navbar-nav .nav-link{
-color:#f05f40;
-}
-
-header.abouthead{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("./img/company.jpg");
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-header.abouthead hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-header.abouthead h1 {
-  font-size: 2rem;
-}
-
-header.abouthead p {
-  font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  header.abouthead p {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  header.abouthead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  header.abouthead h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.abouthead h1 {
-    font-size: 4rem;
-  }
-}
+    .dropdown:hover:before {
+      bottom: auto;
+      top: 0;
+      width: 70%;
+    }
 
 
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2d76b1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+      z-index: 1;
+      width: AUTO;
+    }
 
-header.awardshead{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("./img/awards.jpg");
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
-header.awardshead hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-header.awardshead h1 {
-  font-size: 2rem;
-}
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
 
-header.awardshead p {
-  font-weight: 300;
-}
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-@media (min-width: 768px) {
-  header.awardshead p {
-    font-size: 1.15rem;
-  }
-}
+    .dropdown-content a:hover {
+      background-color: #437397;
+    }
 
-@media (min-width: 992px) {
-  header.awardshead{
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  header.awardshead h1 {
-    font-size: 3rem;
-  }
-}
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+      font-weight: bold;
+    }
 
-@media (min-width: 1200px) {
-  header.awardshead h1 {
-    font-size: 4rem;
-  }
-}
+    .navbar-light:hover .navbar-nav:hover .nav-link:hover {
+      color: #437397;
+    }
 
-</style>
-  </head>
+    .navbar-light .navbar-nav .nav-link {
+      color: #2d76b1;
+    }
 
-  <body id="page-top" onload="typeWriter()">
+    header.abouthead {
+      padding-top: 10rem;
+      padding-bottom: calc(10rem - 56px);
+      background-image: url("./img/company.jpg");
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
-      <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/logo.png" height="60px" width="120px"></a><p style="color:#62442D;font-weight:bold;margin-top:15px">RaajRoop Print Management Pvt Ltd.</p>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-		  <div class="dropdown">
-		  <li class="nav-item">
+    header.abouthead hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    header.abouthead h1 {
+      font-size: 2rem;
+    }
+
+    header.abouthead p {
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      header.abouthead p {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      header.abouthead {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      header.abouthead h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      header.abouthead h1 {
+        font-size: 4rem;
+      }
+    }
+
+
+
+    header.awardshead {
+      padding-top: 10rem;
+      padding-bottom: calc(10rem - 56px);
+      background-image: url("./img/awards.jpg");
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    header.awardshead hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    header.awardshead h1 {
+      font-size: 2rem;
+    }
+
+    header.awardshead p {
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      header.awardshead p {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      header.awardshead {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      header.awardshead h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      header.awardshead h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body id="page-top" onload="typeWriter()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <img src="img/logo.jpeg" height="60px" width="120px">
+      </a>
+      <p style="color:#2d76b1;font-weight:bold;margin-top:15px">RaajRoop Print Management Pvt Ltd.</p>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <div class="dropdown">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="index.html">HOME</a>
-            </li></div>
-		  <div class="dropdown">
+            </li>
+          </div>
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">ABOUT</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  href="#about">COMPANY</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#leadership">LEADERSHIP</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#awards">AWARDS</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#membership&carrier">MEMBERSHIPS</a>
-            </li>
-						 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#membership&carrier">CARRERS</a>
-            </li>
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#about">COMPANY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#leadership">LEADERSHIP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#awards">AWARDS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#membership&carrier">MEMBERSHIPS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#membership&carrier">CARRERS</a>
+                </li>
 
-			</ul>
-  </div></div>
-  
+              </ul>
+            </div>
+          </div>
+
           <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">PROMOTIONAL</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">PACKING</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">PRINT</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">CREATIVE</a>
-            </li>
-			</ul>
-  </div></div>
-  
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">PACKING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">PRINT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">CREATIVE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
- <div class="dropdown"> 
+
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="innovations.html">INNOVATIONS</a>
             </li>
-			  <div class="dropdown-content">
-			  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">INHABITABLE</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">MARKET&nbsp;VALUE</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">RESOURCES</a>
-            </li>
-			</ul>
-  </div></div>
-   <div class="dropdown"> 
+            <div class="dropdown-content">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">INHABITABLE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">MARKET&nbsp;VALUE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#">RESOURCES</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
-            </li></div>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="abouthead text-center text-white d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2 class="text-uppercase">
+            <strong id="moving-text"></strong>
+          </h2>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
+            and expected value.!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-primary" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h3 class="section-heading text-white" style="font-weight:bold">COMPANY</h3>
+          <hr class="light my-4">
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
+            and expected value. We are more focused towards innovation, automation,real time and client driven.This is what
+            makes RR Print Management Pvt. Ltd as a leading company in the market.
+            <br>
+            <br> Our team consults Businesses to use innovative Solutions. Our team has wide experience in the field of Print,
+            POS, Packing, Promotional products and their approaches. We take on clients selectively and advise them on value
+            creating solutions. We are into Integrated and Innovative Technologies. We believe in advice that leads to results
+            and are willing to engage deeply and sustainably with our clients. We consult prospects and client with end to
+            end solutions.
+          </p>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">MISSION</h5>
+          <br>
+          <br>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Achieve The Highest Levels Of Customer Satisfaction Through Timely Delivery And Integration Of Cutting-Edge
+            Technology Solutions And Work With Our Clients On Innovations, Technology Adaptation And Integration Throughout
+            The Corporation.</p>
+          <br>
+          <br>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VISSION</h5>
+          <br>
+          <br>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Be An Established Leader In The Field Of IT Services, Research and Development, System Integration , And To
+            Provide Our Clients With 'Leading Edge' Products And Solutions. We wish to be most preferred IT service provider
+            for budding startups.</p>
+          <br>
+          <br>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VALUES</h5>
+          <br>
+          <br>
+          <ul style="color:white">
+            <li>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Our primary business is client satisfaction</p>
+            </li>
+            <li>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Continues Innovations and Technologies Improvemnt</p>
+            </li>
+            <li>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Participation Empowerment & Sustainability</p>
+            </li>
           </ul>
         </div>
       </div>
-    </nav>
-	
-    <header class="abouthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2 class="text-uppercase">
-              <strong id="moving-text"></strong>
-            </h2>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
-          </div>
-        </div>
-      </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h3 class="section-heading text-white" style="font-weight:bold">COMPANY</h3>
-            <hr class="light my-4">
-            <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result and expected value. We are more focused towards innovation, automation,real time and client driven.This is what makes RR Print Management Pvt. Ltd as a leading company in the market.
-				<br><br>
-			Our team consults Businesses to use innovative Solutions. Our team has wide experience in the field of Print, POS, Packing, Promotional products and their approaches.
-			
-			We take on clients selectively and advise them on value creating solutions. We are into Integrated and Innovative Technologies. We believe in advice that leads to results and are willing to engage deeply and sustainably with our clients. We consult prospects and client with end to end solutions.
-			</p>
-			   <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">MISSION</h5><br><br>
-			   <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Achieve The Highest Levels Of Customer Satisfaction Through Timely Delivery And Integration Of Cutting-Edge Technology Solutions And Work With Our Clients On Innovations, Technology Adaptation And Integration Throughout The Corporation.</p>
-				<br><br>
-				 <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VISSION</h5><br><br>
-			   <p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Be An Established Leader In The Field Of IT Services, Research and Development, System Integration , And To Provide Our Clients With 'Leading Edge' Products And Solutions. We wish to be most preferred IT service provider for budding startups.</p>
-			<br><br>
-			   <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VALUES</h5><br><br>
-			   <ul style="color:white">
-			   <li><p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Our primary business is client satisfaction</p></li>
-				<li><p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Continues Innovations and Technologies Improvemnt</p></li>
-				<li><p class="text-faded mb-4"  style="text-align: justify;text-justify: inter-word;word-spacing:8px">Participation Empowerment & Sustainability</p></li>		
-				</ul>		
-		  </div>
-        </div>
-      </div>
-    </section>
 
-	
-	
-	
-    <section id="leadership">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">LEADERSHIP</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <img src="img/profile.png">
-              <h3 class="mb-3">Person 1</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-             <img src="img/profile.png">
-              <h3 class="mb-3">Person 2</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-             <img src="img/profile.png">
-              <h3 class="mb-3">Person 3</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-       <img src="img/profile.png">
-              <h3 class="mb-3">Person 4</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    
-	<header class="awardshead text-center text-white d-flex" id="awards">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2 class="text-uppercase">
-              <strong>AWARDS</strong> <i  class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-            </h2>
-            <hr>
+
+  <section id="leadership">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">LEADERSHIP</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <img src="img/profile.png">
+            <h3 class="mb-3">Person 1</h3>
+            <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
           </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreawards">Know More</a>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <img src="img/profile.png">
+            <h3 class="mb-3">Person 2</h3>
+            <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <img src="img/profile.png">
+            <h3 class="mb-3">Person 3</h3>
+            <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <img src="img/profile.png">
+            <h3 class="mb-3">Person 4</h3>
+            <p class="text-muted mb-0">You have to make your websites with love these days!</p>
           </div>
         </div>
       </div>
-    </header>
-	
-	
-	
-	<section id="moreawards">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">ACKNOWLEDGEMENTS</h2>
-            <hr class="my-4">
+    </div>
+  </section>
+
+
+  <header class="awardshead text-center text-white d-flex" id="awards">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2 class="text-uppercase">
+            <strong>AWARDS</strong>
+            <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+          </h2>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
+            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
+            and expected value.!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreawards">Know More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <section id="moreawards">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">ACKNOWLEDGEMENTS</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+            <a class="mb-3" href="services.html">Promotional Products</a>
+            <p class="text-muted mb-0">We Have variety of promotional products to make your business successful!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+            <a class="mb-3" href="services.html">Packing</a>
+            <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better solution for you!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+            <a class="mb-3" href="services.html">Print</a>
+            <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative optiaons!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+            <a class="mb-3" href="services.html">Creative</a>
+            <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for better understanding!</p>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <a class="mb-3" href="services.html">Promotional Products</a>
-              <p class="text-muted mb-0">We Have variety of promotional products to make your business successful!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-             <a class="mb-3" href="services.html">Packing</a>
-              <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better solution for you!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-             <a class="mb-3" href="services.html">Print</a>
-              <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative optiaons!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-             <a class="mb-3" href="services.html">Creative</a>
-              <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for better understanding!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-	
-	
-	
- <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Creativity
-                  </div>
-                  <div class="project-name">
-                  <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="p-0" id="portfolio">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters popup-gallery">
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Creativity
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Ecconomy
-                  </div>
-                  <div class="project-name">
-  <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Ecconomy
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Technology
-                  </div>
-                  <div class="project-name">
-                   <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Technology
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    interior
-                  </div>
-                  <div class="project-name">
-                     <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  interior
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Packing
-                  </div>
-                  <div class="project-name">
-                     <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Packing
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Innovations
-                  </div>
-                  <div class="project-name">
-                     <input type="button" class="btn btn-light btn-xl sr-button special-btn" value="Read More!" onclick="redirect()">
-                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Innovations
+                </div>
+                <div class="project-name">
+                  <input type="button" class="btn btn-light btn-xl sr-button " value="Read More!" onclick="redirect()">
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Your Requirements,Our Innovations!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="innovations.html">Know more!</a>
+  <section class="bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Your Requirements,Our Innovations!</h2>
+      <a class="btn btn-light btn-xl sr-button" href="innovations.html">Know more!</a>
+    </div>
+  </section>
+
+  <section id="membership&carrier">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="my-4">
+          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back
+            to you as soon as possible!</p>
+        </div>
       </div>
-    </section>
+      <div class="row">
+        <div class="col-lg-5 ml-auto text-center">
+          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+          <p>123-456-6789</p>
+        </div>
+        <div class="col-lg-5 mr-auto text-center">
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <p>
+            <a href="mailto:your-email@your-domain.com">Raajroopprint@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <section id="membership&carrier">
-      <div class="container">
+    <div class="col-lg-8 mx-auto text-center">
+      <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
+      <h5 style="color:#2d76b1" class="section-heading">CONTACT US NOW !</h5>
+      <hr>
+
+      <div class="alert alert-danger" style="display:none" id="errorDiv">
+        <strong>Error!</strong>&nbsp;&nbsp;&nbsp;
+        <span id="errorMsg"></span>
+      </div>
+
+      <form>
         <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_name">Firstname *</label>
+              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required"
+                data-error="Firstname is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_lastname">Lastname *</label>
+              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                data-error="Lastname is required.">
+              <div class="help-block with-errors"></div>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-5 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
-          </div>
-          <div class="col-lg-5 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">Raajroopprint@gmail.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-	
-	 <div class="col-lg-8 mx-auto text-center">
-	  <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
-	  <h5 style="color:#f05f40" class="section-heading">CONTACT US NOW !</h5>
-	  <hr>
-	  
-	  <div class="alert alert-danger" style="display:none" id="errorDiv">
-     <strong>Error!</strong>&nbsp;&nbsp;&nbsp;<span id="errorMsg"></span>
-      </div>
-	  
-	  <form>
-	  <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_email">Email *</label>
+              <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
+                data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_phone">Phone</label>
+              <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone">
+              <div class="help-block with-errors"></div>
             </div>
+          </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_name">JOb Title</label>
+              <input id="form_name" type="text" name="jobTitle" class="form-control" placeholder="Please enter your job title">
+              <div class="help-block with-errors"></div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_phone">Phone</label>
-                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone">
-                    <div class="help-block with-errors"></div>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_lastname">Company Name</label>
+              <input id="form_lastname" type="text" name="companyName" class="form-control" placeholder="Please enter company name">
+              <div class="help-block with-errors"></div>
             </div>
-        </div>
-		 <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">JOb Title</label>
-                    <input id="form_name" type="text" name="jobTitle" class="form-control" placeholder="Please enter your job title">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Company Name</label>
-                    <input id="form_lastname" type="text" name="companyName" class="form-control" placeholder="Please enter company name">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea  style="
-font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="form_message">Message *</label>
+              <textarea style="
+font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
+                data-error="Please,leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
             </div>
-			
-			<div class="col-md-6">
-			     <p style="float:left;font-size:12px" class="text-muted"><strong>*</strong> These fields are required. </p>
+          </div>
+
+          <div class="col-md-6">
+            <p style="float:left;font-size:12px" class="text-muted">
+              <strong>*</strong> These fields are required. </p>
+          </div>
+          <div class="col-md-6">
+            <input style="float:right; background:#2d76b1" type="button" class="btn btn-success btn-send" value="Send message" onclick="return contactValidation()">
+          </div>
+
         </div>
-            <div class="col-md-6">
-                <input style="float:right; background:#f05f40" type="button" class="btn btn-success btn-send" value="Send message" onclick="return contactValidation()">
-            </div>
-
-        </div><br>
-<div class="alert alert-success" style="display:none" id="successMsg">
-  <strong>Success!</strong> Thanks For Reaching us,we will get back to you soon.
-</div>
-</form>
+        <br>
+        <div class="alert alert-success" style="display:none" id="successMsg">
+          <strong>Success!</strong> Thanks For Reaching us,we will get back to you soon.
+        </div>
+      </form>
 
 
 
-	 </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
-	<script src="js/extrajs.js"></script>
-	<script>
- var txt = 'Expectation Yours, Effort Ours!';
-var chars = txt.split('');
-var speed = 50; 
-var i = 0;
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("moving-text").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+  <script src="js/extrajs.js"></script>
+  <script>
+    var txt = 'Expectation Yours, Effort Ours!';
+    var chars = txt.split('');
+    var speed = 50;
+    var i = 0;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("moving-text").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
 
-function redirect(){
-window.location="http://localhost/RaajRoop/innovations.html";
-}
+    function redirect() {
+      window.location = "http://localhost/RaajRoop/innovations.html";
+    }
 
 
-</script>
-<footer class="footer"><br>
-  <div class="container text-center">
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-google-plus"></i></a>
-    <a href="#"><i class="fa fa-skype"></i></a>
-  </div><br>
-  <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.<br><br>( Developed by Sateesh Pandey +918860373248 )</p>
-</footer>
-  </body>
+  </script>
+  <footer class="footer">
+    <br>
+    <div class="container text-center">
+      <a href="#">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-skype"></i>
+      </a>
+    </div>
+    <br>
+    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.
+      <br>
+      <br>( Developed by Sateesh Pandey +918860373248 )</p>
+  </footer>
+</body>
 
 </html>
