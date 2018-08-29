@@ -107,7 +107,7 @@
     }
 
     .dropdown-content a {
-      color: white;
+      color: white !important;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
@@ -227,6 +227,19 @@
         font-size: 4rem;
       }
     }
+
+    .navbar-light:hover .navbar-nav:hover .nav-link:hover {
+      color: #437397;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active {
+      color: #2d76b1;
+      font-weight: bold;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: #2d76b1;
+    }
   </style>
 </head>
 
@@ -248,30 +261,28 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="index.html">HOME</a>
+            <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#about">ABOUT</a>
+            <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">COMPANY</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#leadership">LEADERSHIP</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#leadership">LEADERSHIP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#awards">AWARDS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#awards">AWARDS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#membership&carrier">MEMBERSHIPS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#portfolio">MEMBERSHIPS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#membership&carrier">CARRERS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CARRERS</a>
               </li>
-
             </ul>
           </li>
-
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
@@ -279,37 +290,38 @@
                 <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
               </li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="innovations.html">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">INHABITABLE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">MARKET&nbsp;VALUE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">RESOURCES</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">RESOURCES</a>
               </li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
-          </li>
+          <div class="dropdown">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CONTACT</a>
+            </li>
+          </div>
+        </ul>
       </div>
-      </ul>
-    </div>
     </div>
   </nav>
 
@@ -453,7 +465,7 @@
 
 
 
-  <section id="moreawards">
+  <section id="awards">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -707,16 +719,12 @@ font-size:12px;" id="form_message" name="message" class="form-control" placehold
           <div class="col-md-6">
             <input style="float:right; background:#2d76b1" type="button" class="btn btn-success btn-send" value="Send message" onclick="return contactValidation()">
           </div>
-
         </div>
         <br>
         <div class="alert alert-success" style="display:none" id="successMsg">
           <strong>Success!</strong> Thanks For Reaching us,we will get back to you soon.
         </div>
       </form>
-
-
-
     </div>
   </section>
 

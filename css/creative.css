@@ -90,7 +90,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  font-weight: 700;
+  font-size: 19px;
   text-transform: uppercase;
   color: #2d76b1;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -115,7 +115,7 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #2d76b1 !important;
+  color: #437397;
   background-color: transparent;
 }
 

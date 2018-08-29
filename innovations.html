@@ -33,23 +33,13 @@
       font-size: 12px;
     }
 
-    .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .dropdown {
+    .dropdown{
       position: relative;
-      display: inline-block;
-      letter-spacing: 0;
+      display: inline-bock;
+      letter-spacing: 0
     }
 
-    .dropdown:hover,
-    .dropdown:active {
+    .dropdown:hover, .dropdown:active{
       letter-spacing: 5px;
     }
 
@@ -65,7 +55,6 @@
       transition: all 280ms ease-in-out;
       width: 0;
     }
-
     .dropdown:hover:after,
     .dropdown:hover:before {
       backface-visibility: hidden;
@@ -73,13 +62,11 @@
       transition: width 350ms ease-in-out;
       width: 70%;
     }
-
     .dropdown:hover:before {
       bottom: auto;
       top: 0;
       width: 70%;
     }
-
 
     .dropdown-content {
       display: none;
@@ -91,22 +78,16 @@
       width: AUTO;
     }
 
-
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .dropdown:hover .dropbtn {
-      background-color: #3e8e41;
-    }
-
     .dropdown-content a {
-      color: white;
+      color: white  !important;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
-
     .dropdown-content a:hover {
       background-color: #437397;
     }
@@ -118,6 +99,11 @@
 
     .navbar-light:hover .navbar-nav:hover .nav-link:hover {
       color: #437397;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active {
+      color: #2d76b1;
+      font-weight: bold;
     }
 
     .navbar-light .navbar-nav .nav-link {
@@ -226,7 +212,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand js-scroll-trigger" href="index.html">
           <img src="img/logo.jpeg" height="80px" width="120px">
@@ -240,7 +226,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="index.html">HOME</a>
+            <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
@@ -255,14 +241,13 @@
                 <a class="nav-link js-scroll-trigger" href="about.html#awards">AWARDS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">MEMBERSHIPS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#portfolio">MEMBERSHIPS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CARRERS</a>
               </li>
             </ul>
           </li>
-
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
@@ -270,37 +255,38 @@
                 <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
               </li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">MARKET&nbsp;VALUE</a>
+                <a class="nav-link js-scroll-trigger" href="#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">RESOURCES</a>
               </li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
-          </li>
+          <div class="dropdown">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
+            </li>
+          </div>
+        </ul>
       </div>
-      </ul>
-    </div>
     </div>
   </nav>
 
@@ -313,9 +299,10 @@
           </h2>
           <hr>
         </div>
-        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-          starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
-          satisfaction and on time delievry with desired result and expected value.!</p>
+        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading
+          procurement partner in the field of outsourcing industry since starting of our carrier.We have variety of services
+          that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired
+          result and expected value.!</p>
         <div class="col-lg-8 mx-auto">
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
         </div>
@@ -329,46 +316,52 @@
         <div class="col-lg-10 mx-auto text-center">
           <h3 class="section-heading text-white" style="font-weight:bold">INNOVATIONS</h3>
           <hr class="light my-4">
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-            starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
-            satisfaction and on time delievry with desired result and expected value.!
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management
+            Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our
+            carrier.We have variety of services that we provide to our customers, We have 100% rate of customer satisfaction
+            and on time delievry with desired result and expected value.!
             <br>
-            <br> Technology is developing at a rapid pace and changing many established methods of accomplishing tasks and completing
-            projects. The print and design industries are excellent examples of areas seeing these changes and innovations.
-            To remain competitive and profitable, both large and small print business owners are encouraged to educate themselves
-            on the latest developments in their industries, particularly in software and machine features. Some recent print
-            technology innovations worth noting include high-speed digital printing on demand, three-dimensional printing,
-            hybrid print processes and the increased efficiency of digital print workflows.
+            <br> Technology is developing at a rapid pace and changing many established methods of accomplishing tasks and
+            completing projects. The print and design industries are excellent examples of areas seeing these changes and
+            innovations. To remain competitive and profitable, both large and small print business owners are encouraged
+            to educate themselves on the latest developments in their industries, particularly in software and machine features.
+            Some recent print technology innovations worth noting include high-speed digital printing on demand, three-dimensional
+            printing, hybrid print processes and the increased efficiency of digital print workflows.
           </p>
-          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">The Rise of 3D Printing</h5>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">The Rise of
+            3D Printing</h5>
           <br>
           <br>
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Printing is no longer confined to flat sheets of paper, and the same mechanical processes can now be applied to
-            rendering three-dimensional objects from raw material. &nbsp;&nbsp;&nbsp;
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Printing is no
+            longer confined to flat sheets of paper, and the same mechanical processes can now be applied to rendering three-dimensional
+            objects from raw material. &nbsp;&nbsp;&nbsp;
             <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePromotional" style="text-decoration:underline"
               onclick="scrollWin()">Read More</a>
           </p>
           <div id="readmorePromotional" class="collapse">
             <div class="row">
               <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">This innovation has caught significant attention within the print and design industries, and many print business
-                  owners have taken note of the creative as well as the manufacturing possibilities. Rendering replacement
-                  appliance and machine parts is now a service found in some print companies whose owners would not have
-                  conceived of the idea in the past. Larger scale commercial 3D printing also has the potential for innovations
-                  in the trade show exhibit specialty field. As the demand for visually unique display booths increases,
-                  design companies that utilize 3D printing for booth pieces are in a great position to draw this type of
-                  exhibitor clientele.</p>
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">This innovation
+                  has caught significant attention within the print and design industries, and many print business owners
+                  have taken note of the creative as well as the manufacturing possibilities. Rendering replacement appliance
+                  and machine parts is now a service found in some print companies whose owners would not have conceived
+                  of the idea in the past. Larger scale commercial 3D printing also has the potential for innovations in
+                  the trade show exhibit specialty field. As the demand for visually unique display booths increases, design
+                  companies that utilize 3D printing for booth pieces are in a great position to draw this type of exhibitor
+                  clientele.</p>
               </div>
 
             </div>
           </div>
           <br>
           <br>
-          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Software Innovations for Print Businesses</h5>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Software Innovations
+            for Print Businesses</h5>
           <br>
           <br>
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Graphic design software for print projects now has a wider range of features and tools, allowing for easier workflows,
-            better file compatibility and more collaboration between designers in different geographic locations. &nbsp;&nbsp;&nbsp;
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Graphic design
+            software for print projects now has a wider range of features and tools, allowing for easier workflows, better
+            file compatibility and more collaboration between designers in different geographic locations. &nbsp;&nbsp;&nbsp;
             <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmorePackingnPrint" style="text-decoration:underline"
               onclick="scrollWin()">Read More</a>
           </p>
@@ -376,23 +369,26 @@
           <div id="readmorePackingnPrint" class="collapse">
             <div class="row">
               <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">New design software suites now include three-dimensional tools that allow designers to create parts and objects
-                  without the need for extensive engineering knowledge. Even two-dimensional printed projects can now be
-                  completed with more cost-effective methods, thanks to the greater flexibility of modern design software.
-                  The need for film media and offset print machines is in a steady decline as more of the same results can
-                  be accomplished electronically with software workflows. The learning curve of these design suites may be
-                  somewhat steeper in the beginning for new users, but print company owners who invest in them are seeing
-                  the benefits in terms of higher project quality in less time.</p>
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">New design
+                  software suites now include three-dimensional tools that allow designers to create parts and objects without
+                  the need for extensive engineering knowledge. Even two-dimensional printed projects can now be completed
+                  with more cost-effective methods, thanks to the greater flexibility of modern design software. The need
+                  for film media and offset print machines is in a steady decline as more of the same results can be accomplished
+                  electronically with software workflows. The learning curve of these design suites may be somewhat steeper
+                  in the beginning for new users, but print company owners who invest in them are seeing the benefits in
+                  terms of higher project quality in less time.</p>
               </div>
             </div>
           </div>
 
-          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Hybrid Print Technologies</h5>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Hybrid Print
+            Technologies</h5>
           <br>
           <br>
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely
-            digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate
-            automation. &nbsp;&nbsp;&nbsp;
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast
+            pace of technological innovation, print and design businesses do not have to switch to purely digital processes
+            overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate automation.
+            &nbsp;&nbsp;&nbsp;
             <a data-toggle="collapse" class="btn btn-primary btn-sm js-scroll-trigger" data-target="#readmoreCreative" style="text-decoration:underline"
               onclick="scrollWin()">Read More</a>
           </p>
@@ -400,7 +396,8 @@
           <div id="readmoreCreative" class="collapse">
             <div class="row">
               <div class="col-lg-12 col-md-6 text-center" style="height:auto;text-align:left">
-                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast pace of technological innovation, print and design businesses do not have to switch to purely
+                <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite
+                  the fast pace of technological innovation, print and design businesses do not have to switch to purely
                   digital processes overnight. They can instead integrate both digital and offset processes thanks to computer-to-print-plate
                   automation. This process allows the user to send finished image files to electronic plates that are able
                   to recognize them, using technologies similar to those found in desktop scanners. Due to improvements in
@@ -426,9 +423,10 @@
           </h2>
           <hr>
         </div>
-        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-          starting of our carrier.We have variety of services that we provide to our customers, We have 100% rate of customer
-          satisfaction and on time delievry with desired result and expected value.!</p>
+        <p class="text-faded mb-5" style="color:white;font-weight:bold">RR Print Management Pvt. Ltd has been the leading
+          procurement partner in the field of outsourcing industry since starting of our carrier.We have variety of services
+          that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired
+          result and expected value.!</p>
         <div class="col-lg-8 mx-auto">
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreInmarketingnInnovation">Know More</a>
         </div>
@@ -454,7 +452,8 @@
           <img src="img/sustainability1.png" width="300px" height="300px">
         </div>
         <div class="col-lg-8">
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Moving towards sustainability is also a social challenge that entails international and national law, urban planning
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Moving
+            towards sustainability is also a social challenge that entails international and national law, urban planning
             and transport, local and individual lifestyles and ethical consumerism. Ways of living more sustainably can take
             many forms from reorganizing living conditions (e.g., ecovillages, eco-municipalities and sustainable cities),
             reappraising economic sectors (permaculture, green building, sustainable agriculture), or work practices (sustainable
@@ -468,8 +467,9 @@
 
       <div class="row">
         <div class="col-lg-8">
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Market value is the price an asset would fetch in the marketplace. Market value is also commonly used to refer
-            to the market capitalization of a publicly-traded company, and is obtained by multiplying the number of its outstanding
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">Market
+            value is the price an asset would fetch in the marketplace. Market value is also commonly used to refer to the
+            market capitalization of a publicly-traded company, and is obtained by multiplying the number of its outstanding
             shares by the current share price. Market value is easiest to determine for exchange-traded instruments such
             as stocks and futures, since their market prices are widely disseminated and easily available, but is a little
             more challenging to ascertain for over-the-counter instruments like fixed income securities. However, the greatest
@@ -496,8 +496,8 @@
         <div class="col-lg-10 mx-auto text-center">
           <h2 class="section-heading">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back
-            to you as soon as possible!</p>
+          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and
+            we will get back to you as soon as possible!</p>
         </div>
       </div>
       <div class="row">
@@ -659,7 +659,8 @@ font-size:12px;" id="form_message" name="message" class="form-control" placehold
       </a>
     </div>
     <br>
-    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.
+    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights
+      Reserved.
       <br>
       <br>( Developed by Sateesh Pandey +918860373248 )</p>
   </footer>

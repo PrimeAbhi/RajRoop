@@ -39,19 +39,10 @@
       font-size: 12px;
     }
 
-    .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
     .dropdown {
       position: relative;
-      display: inline-block;
-      letter-spacing: 0;
+      display: inline-bock;
+      letter-spacing: 0
     }
 
     .dropdown:hover,
@@ -86,7 +77,6 @@
       width: 70%;
     }
 
-
     .dropdown-content {
       display: none;
       position: absolute;
@@ -97,17 +87,12 @@
       width: AUTO;
     }
 
-
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .dropdown:hover .dropbtn {
-      background-color: #3e8e41;
-    }
-
     .dropdown-content a {
-      color: white;
+      color: white !important;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
@@ -124,6 +109,11 @@
 
     .navbar-light:hover .navbar-nav:hover .nav-link:hover {
       color: #437397;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active {
+      color: #2d76b1;
+      font-weight: bold;
     }
 
     .navbar-light .navbar-nav .nav-link {
@@ -150,7 +140,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#about" style="color:#2d76b1">HOME</a>
+            <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
@@ -159,16 +149,16 @@
                 <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="about.html">LEADERSHIP</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#leadership">LEADERSHIP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="about.html">AWARDS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#awards">AWARDS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="about.html">MEMBERSHIPS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#portfolio">MEMBERSHIPS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="about.html">CARRERS</a>
+                <a class="nav-link js-scroll-trigger" href="about.html#membership&carrier">CARRERS</a>
               </li>
             </ul>
           </li>
@@ -176,30 +166,31 @@
             <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">PROMOTIONAL</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
               </li>
             </ul>
           </li>
+
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="innovations.html">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html">INHABITABLE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html">MARKET&nbspVALUE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html">RESOURCES</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">RESOURCES</a>
               </li>
             </ul>
           </li>
@@ -223,8 +214,8 @@
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-          <p class="text-faded mb-5">“The customers perception is your reality. What they think about your products , MATTER. If you dont put your customers
-            perception first, THE GAME IS OVER.!”
+          <p class="text-faded mb-5">“The customers perception is your reality. What they think about your products , MATTER.
+            If you dont put your customers perception first, THE GAME IS OVER.!”
             <br>
             <br> --We Believe
           </p>
@@ -242,8 +233,8 @@
           <hr class="light my-4">
           <p class="text-faded mb-4">Customer service shouldn’t just be a department, it should be the entire company.!
             <br>
-            <br> The single most important thing is to make people happy. If you are making people happy, as a side effect, they
-            will be happy to open up their wallets and pay you.</p>
+            <br> The single most important thing is to make people happy. If you are making people happy, as a side effect,
+            they will be happy to open up their wallets and pay you.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Know more!</a>
         </div>
       </div>
@@ -272,21 +263,25 @@
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Packing</a>
-            <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better solution for you!</p>
+            <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better
+              solution for you!</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Print</a>
-            <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative optiaons!</p>
+            <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative
+              optiaons!
+            </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Creative</a>
-            <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for better understanding!</p>
+            <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for
+              better understanding!</p>
           </div>
         </div>
       </div>
@@ -403,8 +398,8 @@
         <div class="col-lg-10 mx-auto text-center">
           <h2 class="section-heading">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back
-            to you as soon as possible!</p>
+          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and
+            we will get back to you as soon as possible!</p>
         </div>
       </div>
       <div class="row">
@@ -566,7 +561,8 @@ font-size:12px;" id="form_message" name="message" class="form-control" placehold
       </a>
     </div>
     <br>
-    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights Reserved.
+    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RaajRoop Print Management Pvt Ltd All Rights
+      Reserved.
       <br>
       <br>( Developed by Sateesh Pandey +918860373248 )</p>
   </footer>
