@@ -90,7 +90,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  font-size: 19px;
+  font-weight: 700;
   text-transform: uppercase;
   color: #2d76b1;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
