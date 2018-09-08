@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>RRPM</title>
-
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -42,39 +39,13 @@
     .dropdown {
       position: relative;
       display: inline-bock;
-      letter-spacing: 0
+      letter-spacing: 1px;
+      border-bottom: 3px solid transparent
     }
 
     .dropdown:hover,
     .dropdown:active {
-      letter-spacing: 5px;
-    }
-
-    .dropdown:after,
-    .dropdown:before {
-      backface-visibility: hidden;
-      border: 1px solid rgba(#fff, 0);
-      bottom: 0px;
-      content: " ";
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      transition: all 280ms ease-in-out;
-      width: 0;
-    }
-
-    .dropdown:hover:after,
-    .dropdown:hover:before {
-      backface-visibility: hidden;
-      border-color: #fff;
-      transition: width 350ms ease-in-out;
-      width: 70%;
-    }
-
-    .dropdown:hover:before {
-      bottom: auto;
-      top: 0;
-      width: 70%;
+      border-bottom: 3px solid #437397
     }
 
     .dropdown-content {
@@ -127,23 +98,21 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">
-          <img src="img/logo.jpeg" height="80px" width="120px">
-        </a>
-        <a style="color:#2d76b1" class="navbar-brand">Rajroop Print Management Pvt Ltd.</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <img src="img/logo.jpeg" height="80px" width="120px">
+      </a>
+      <a class="navbar-brand">Rajroop Print Management Pvt Ltd.</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
+            <a class="nav-link js-scroll-trigger">ABOUT</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
@@ -163,34 +132,33 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
+            <a class="nav-link js-scroll-trigger">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#services">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#serivce">CREATIVE</a>
               </li>
             </ul>
           </li>
-
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INHABITABLE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INNOVATION</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">RESOURCES</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">MARKET&nbsp;VALUE & RESOURCES</a>
               </li>
             </ul>
           </li>
@@ -205,7 +173,7 @@
   </nav>
 
   <header class="masthead text-center text-white d-flex">
-    <div class="container my-auto">
+    <div class="container-fluid my-auto">
       <div class="row">
         <div class="col-lg-12 mx-auto">
           <h2 class="text-uppercase">
@@ -245,7 +213,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">At Your Service</h2>
+          <h2 class="section-heading" style="color:#2d76b1">At Your Service</h2>
           <hr class="my-4">
         </div>
       </div>
@@ -396,28 +364,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <h2 class="section-heading" style="color:#2d76b1">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and
-            we will get back to you as soon as possible!</p>
+          <p class="mb-5" style="color:#2d76b1">Ready to start your next project with us? That's great! Give us a call or
+            send us an email and we will get back to you as soon as possible!</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-5 ml-auto text-center">
-          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-          <p>123-456-6789</p>
+          <i class="fa fa-phone fa-3x mb-3 sr-contact" style="color:#437397"></i>
+          <p style="color:#2d76b1">123-456-6789</p>
         </div>
         <div class="col-lg-5 mr-auto text-center">
-          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact" style="color:#437397"></i>
           <p>
             <a href="mailto:your-email@your-domain.com">Rajroopprint@gmail.com</a>
           </p>
         </div>
       </div>
+      <br>
     </div>
 
     <div class="col-lg-8 mx-auto text-center">
-      <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
       <h5 style="color:#2d76b1" class="section-heading">CONTACT US NOW !</h5>
       <hr>
       <div class="alert alert-danger" style="display:none" id="errorDiv">
@@ -564,7 +532,6 @@ font-size:12px;" id="form_message" name="message" class="form-control" placehold
     <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RajRoop Print Management Pvt Ltd All Rights
       Reserved.
       <br>
-      <br>( Developed by Sateesh Pandey +918860373248 )</p>
   </footer>
 </body>
 

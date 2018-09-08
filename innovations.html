@@ -33,39 +33,16 @@
       font-size: 12px;
     }
 
-    .dropdown{
+    .dropdown {
       position: relative;
       display: inline-bock;
-      letter-spacing: 0
+      letter-spacing: 1px;
+      border-bottom: 3px solid transparent
     }
 
-    .dropdown:hover, .dropdown:active{
-      letter-spacing: 5px;
-    }
-
-    .dropdown:after,
-    .dropdown:before {
-      backface-visibility: hidden;
-      border: 1px solid rgba(#fff, 0);
-      bottom: 0px;
-      content: " ";
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      transition: all 280ms ease-in-out;
-      width: 0;
-    }
-    .dropdown:hover:after,
-    .dropdown:hover:before {
-      backface-visibility: hidden;
-      border-color: #fff;
-      transition: width 350ms ease-in-out;
-      width: 70%;
-    }
-    .dropdown:hover:before {
-      bottom: auto;
-      top: 0;
-      width: 70%;
+    .dropdown:hover,
+    .dropdown:active {
+      border-bottom: 3px solid #437397
     }
 
     .dropdown-content {
@@ -83,11 +60,12 @@
     }
 
     .dropdown-content a {
-      color: white  !important;
+      color: white !important;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
+
     .dropdown-content a:hover {
       background-color: #437397;
     }
@@ -111,8 +89,8 @@
     }
 
     header.innovationhead {
-      padding-top: 10rem;
-      padding-bottom: calc(10rem - 56px);
+      padding-top: 15rem;
+      padding-bottom: calc(15rem - 56px);
       background-image: url("./img/innovations.jpg");
       background-position: center center;
       -webkit-background-size: cover;
@@ -229,7 +207,7 @@
             <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
+            <a class="nav-link js-scroll-trigger">ABOUT</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
@@ -249,34 +227,34 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
+            <a class="nav-link js-scroll-trigger">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#services">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#serivce">CREATIVE</a>
               </li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#innovation">INNOVATION</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#marketingnInnovation">RESOURCES</a>
+                <a class="nav-link js-scroll-trigger" href="#moreInmarketingnInnovation">MARKET&nbsp;VALUE & RESOURCES</a>
               </li>
             </ul>
           </li>
@@ -290,7 +268,7 @@
     </div>
   </nav>
 
-  <header class="innovationhead text-center text-white d-flex">
+  <header class="innovationhead text-center text-white d-flex" id="innovation">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-12 mx-auto">
@@ -304,13 +282,13 @@
           that we provide to our customers, We have 100% rate of customer satisfaction and on time delievry with desired
           result and expected value.!</p>
         <div class="col-lg-8 mx-auto">
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#innovations">Know More</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="bg-primary" id="about">
+  <section class="bg-primary" id="innovations">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
@@ -348,7 +326,8 @@
                   of the idea in the past. Larger scale commercial 3D printing also has the potential for innovations in
                   the trade show exhibit specialty field. As the demand for visually unique display booths increases, design
                   companies that utilize 3D printing for booth pieces are in a great position to draw this type of exhibitor
-                  clientele.</p>
+                  clientele.
+                </p>
               </div>
 
             </div>
@@ -382,7 +361,8 @@
           </div>
 
           <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">Hybrid Print
-            Technologies</h5>
+            Technologies
+          </h5>
           <br>
           <br>
           <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Despite the fast
@@ -413,7 +393,6 @@
     </div>
   </section>
 
-
   <header class="innovationmorehead text-center text-white d-flex" id="marketingnInnovation">
     <div class="container my-auto">
       <div class="row">
@@ -437,7 +416,7 @@
 
   <section class="bg-light text-white" id="moreInmarketingnInnovation">
     <div class="container text-center col-lg-8">
-      <h2 class="mb-4" style="color:#62442D">Field Of Innovation, Marketing & Resource</h2>
+      <h2 class="mb-4" style="color:#437397">Field Of Innovation, Marketing & Resource</h2>
       <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px;color:#2d76b1 !important">
         RR Print Management Pvt Ltd has taken the initiative in order to accept all the new technology to grow up. In Order to market
         need and requiremnt RR Print Management Pvt Ltd has taken major role.
@@ -488,34 +467,32 @@
     </div>
   </section>
 
-
-
   <section id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <h2 class="section-heading" style="color:#2d76b1">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and
-            we will get back to you as soon as possible!</p>
+          <p class="mb-5" style="color:#2d76b1">Ready to start your next project with us? That's great! Give us a call or
+            send us an email and we will get back to you as soon as possible!</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-5 ml-auto text-center">
-          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-          <p>123-456-6789</p>
+          <i class="fa fa-phone fa-3x mb-3 sr-contact" style="color:#437397"></i>
+          <p style="color:#2d76b1">123-456-6789</p>
         </div>
         <div class="col-lg-5 mr-auto text-center">
-          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact" style="color:#437397"></i>
           <p>
             <a href="mailto:your-email@your-domain.com">Rajroopprint@gmail.com</a>
           </p>
         </div>
       </div>
+      <br>
     </div>
 
     <div class="col-lg-8 mx-auto text-center">
-      <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
       <h5 style="color:#2d76b1" class="section-heading">CONTACT US NOW !</h5>
       <hr>
       <div class="alert alert-danger" style="display:none" id="errorDiv">
@@ -580,7 +557,7 @@
             <div class="form-group">
               <label for="form_message">Message *</label>
               <textarea style="
-font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
+  font-size:12px;" id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
                 data-error="Please,leave us a message."></textarea>
               <div class="help-block with-errors"></div>
             </div>

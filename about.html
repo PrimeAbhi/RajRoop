@@ -50,13 +50,14 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
-      letter-spacing: 0;
+      display: inline-bock;
+      letter-spacing: 1px;
+      border-bottom: 3px solid transparent
     }
 
     .dropdown:hover,
     .dropdown:active {
-      letter-spacing: 5px;
+      border-bottom: 3px solid #437397
     }
 
     .dropdown:after,
@@ -72,21 +73,6 @@
       width: 0;
     }
 
-    .dropdown:hover:after,
-    .dropdown:hover:before {
-      backface-visibility: hidden;
-      border-color: #fff;
-      transition: width 350ms ease-in-out;
-      width: 70%;
-    }
-
-    .dropdown:hover:before {
-      bottom: auto;
-      top: 0;
-      width: 70%;
-    }
-
-
     .dropdown-content {
       display: none;
       position: absolute;
@@ -96,7 +82,6 @@
       z-index: 1;
       width: AUTO;
     }
-
 
     .dropdown:hover .dropdown-content {
       display: block;
@@ -131,8 +116,8 @@
     }
 
     header.abouthead {
-      padding-top: 10rem;
-      padding-bottom: calc(10rem - 56px);
+      padding-top: 15rem;
+      padding-bottom: calc(15rem - 56px);
       background-image: url("./img/company.jpg");
       background-position: center center;
       -webkit-background-size: cover;
@@ -248,23 +233,21 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background:white">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">
-          <img src="img/logo.jpeg" height="80px" width="120px">
-        </a>
-        <a style="color:#2d76b1" class="navbar-brand">Rajroop Print Management Pvt Ltd.</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <img src="img/logo.jpeg" height="80px" width="120px">
+      </a>
+      <a style="color:#2d76b1" class="navbar-brand">Rajroop Print Management Pvt Ltd.</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown">
             <a class="nav-link js-scroll-trigger" href="index.html" style="color:#2d76b1">HOME</a>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="about.html">ABOUT</a>
+            <a class="nav-link js-scroll-trigger">ABOUT</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="about.html#about">COMPANY</a>
@@ -284,34 +267,34 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="services.html">SERVICES</a>
+            <a class="nav-link js-scroll-trigger">SERVICES</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PROMOTIONAL</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#services">PROMOTIONAL</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PACKING</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PACKING</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">PRINT</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">PRINT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="services.html#about">CREATIVE</a>
+                <a class="nav-link js-scroll-trigger" href="services.html#service">CREATIVE</a>
               </li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a class="nav-link js-scroll-trigger" href="#about">INNOVATIONS</a>
+            <a class="nav-link js-scroll-trigger">INNOVATIONS</a>
             <ul class="dropdown-content navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INHABITABLE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">INNOVATION</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">MARKET&nbsp;VALUE</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#moreInmarketingnInnovation">INHABITABLE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">RESOURCES</a>
+                <a class="nav-link js-scroll-trigger" href="innovations.html#marketingnInnovation">MARKET&nbsp;VALUE & RESOURCES</a>
               </li>
             </ul>
           </li>
@@ -325,7 +308,7 @@
     </div>
   </nav>
 
-  <header class="abouthead text-center text-white d-flex">
+  <header class="abouthead text-center text-white d-flex" id="about">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-12 mx-auto">
@@ -335,25 +318,26 @@
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
-            and expected value.!</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know More</a>
+          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of
+            outsourcing industry since starting of our carrier. We have 100% rate of customer satisfaction and on time delievry
+            with desired result and expected value.!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#company">Know More</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="bg-primary" id="about">
+  <section class="bg-primary" id="company">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
           <h3 class="section-heading text-white" style="font-weight:bold">COMPANY</h3>
           <hr class="light my-4">
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
-            and expected value. We are more focused towards innovation, automation,real time and client driven.This is what
-            makes RR Print Management Pvt. Ltd as a leading company in the market.
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">RR Print Management
+            Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since starting of our
+            carrier. We have 100% rate of customer satisfaction and on time delievry with desired result and expected value.
+            We are more focused towards innovation, automation,real time and client driven.This is what makes RR Print Management
+            Pvt. Ltd as a leading company in the market.
             <br>
             <br> Our team consults Businesses to use innovative Solutions. Our team has wide experience in the field of Print,
             POS, Packing, Promotional products and their approaches. We take on clients selectively and advise them on value
@@ -364,17 +348,17 @@
           <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">MISSION</h5>
           <br>
           <br>
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Achieve The Highest Levels Of Customer Satisfaction Through Timely Delivery And Integration Of Cutting-Edge
-            Technology Solutions And Work With Our Clients On Innovations, Technology Adaptation And Integration Throughout
-            The Corporation.</p>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Achieve The
+            Highest Levels Of Customer Satisfaction Through Timely Delivery And Integration Of Cutting-Edge Technology Solutions
+            And Work With Our Clients On Innovations, Technology Adaptation And Integration Throughout The Corporation.</p>
           <br>
           <br>
-          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VISSION</h5>
+          <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VISION</h5>
           <br>
           <br>
-          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Be An Established Leader In The Field Of IT Services, Research and Development, System Integration , And To
-            Provide Our Clients With 'Leading Edge' Products And Solutions. We wish to be most preferred IT service provider
-            for budding startups.</p>
+          <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">To Be An Established
+            Leader In The Field Of IT Services, Research and Development, System Integration , And To Provide Our Clients
+            With 'Leading Edge' Products And Solutions. We wish to be most preferred IT service provider for budding startups.</p>
           <br>
           <br>
           <h5 class="section-heading text-white" style="font-weight:bold;float:left;text-decoration:underline">VALUES</h5>
@@ -382,13 +366,16 @@
           <br>
           <ul style="color:white">
             <li>
-              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Our primary business is client satisfaction</p>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Our primary
+                business is client satisfaction</p>
             </li>
             <li>
-              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Continues Innovations and Technologies Improvemnt</p>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Continues
+                Innovations and Technologies Improvemnt</p>
             </li>
             <li>
-              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Participation Empowerment & Sustainability</p>
+              <p class="text-faded mb-4" style="text-align: justify;text-justify: inter-word;word-spacing:8px">Participation
+                Empowerment & Sustainability</p>
             </li>
           </ul>
         </div>
@@ -396,14 +383,11 @@
     </div>
   </section>
 
-
-
-
   <section id="leadership">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">LEADERSHIP</h2>
+          <h2 class="section-heading" style="color:#2d76b1">LEADERSHIP</h2>
           <hr class="my-4">
         </div>
       </div>
@@ -413,35 +397,34 @@
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <img src="img/profile.png">
-            <h3 class="mb-3">Person 1</h3>
+            <h3 class="mb-3" style="color:#437397">Person 1</h3>
             <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <img src="img/profile.png">
-            <h3 class="mb-3">Person 2</h3>
+            <h3 class="mb-3" style="color:#437397">Person 2</h3>
             <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <img src="img/profile.png">
-            <h3 class="mb-3">Person 3</h3>
+            <h3 class="mb-3" style="color:#437397">Person 3</h3>
             <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <img src="img/profile.png">
-            <h3 class="mb-3">Person 4</h3>
+            <h3 class="mb-3" style="color:#437397">Person 4</h3>
             <p class="text-muted mb-0">You have to make your websites with love these days!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <header class="awardshead text-center text-white d-flex" id="awards">
     <div class="container my-auto">
@@ -454,22 +437,20 @@
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of outsourcing industry since
-            starting of our carrier. We have 100% rate of customer satisfaction and on time delievry with desired result
-            and expected value.!</p>
+          <p class="text-faded mb-5">RR Print Management Pvt. Ltd has been the leading procurement partner in the field of
+            outsourcing industry since starting of our carrier. We have 100% rate of customer satisfaction and on time delievry
+            with desired result and expected value.!</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#moreawards">Know More</a>
         </div>
       </div>
     </div>
   </header>
 
-
-
   <section id="awards">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">ACKNOWLEDGEMENTS</h2>
+          <h2 class="section-heading" style="color:#2d76b1">ACKNOWLEDGEMENTS</h2>
           <hr class="my-4">
         </div>
       </div>
@@ -487,29 +468,30 @@
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Packing</a>
-            <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better solution for you!</p>
+            <p class="text-muted mb-0">A Part of Packing and Managing the product in order to easy transport, We have better
+              solution for you!</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Print</a>
-            <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative optiaons!</p>
+            <p class="text-muted mb-0">We have world wide variety of printing option with new Technologies and Innovative
+              optiaons!
+            </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
             <a class="mb-3" href="services.html">Creative</a>
-            <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for better understanding!</p>
+            <p class="text-muted mb-0">Creativity is the part of our business, we look at the requiremnt of customer for
+              better understanding!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
 
   <section class="p-0" id="portfolio">
     <div class="container-fluid p-0">
@@ -619,28 +601,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <h2 class="section-heading" style="color:#2d76b1">Let's Get In Touch!</h2>
           <hr class="my-4">
-          <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back
-            to you as soon as possible!</p>
+          <p class="mb-5" style="color:#2d76b1">Ready to start your next project with us? That's great! Give us a call or
+            send us an email and we will get back to you as soon as possible!</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-5 ml-auto text-center">
-          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-          <p>123-456-6789</p>
+          <i class="fa fa-phone fa-3x mb-3 sr-contact" style="color:#437397"></i>
+          <p style="color:#2d76b1">123-456-6789</p>
         </div>
         <div class="col-lg-5 mr-auto text-center">
-          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact" style="color:#437397"></i>
           <p>
             <a href="mailto:your-email@your-domain.com">Rajroopprint@gmail.com</a>
           </p>
         </div>
       </div>
+      <br>
     </div>
 
     <div class="col-lg-8 mx-auto text-center">
-      <p class="mb-5">Or,Fill the form we will get in touch with you!</p>
       <h5 style="color:#2d76b1" class="section-heading">CONTACT US NOW !</h5>
       <hr>
 
@@ -779,9 +761,9 @@ font-size:12px;" id="form_message" name="message" class="form-control" placehold
       </a>
     </div>
     <br>
-    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RajRoop Print Management Pvt Ltd All Rights Reserved.
+    <p class="text-faded mb-5" style="text-align:center;font-size:10px">© 2018 RajRoop Print Management Pvt Ltd All Rights
+      Reserved.
       <br>
-      <br>( Developed by Sateesh Pandey +918860373248 )</p>
   </footer>
 </body>
 
